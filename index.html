@@ -3,50 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDN Test Suite</title>
-    <link rel="stylesheet" href="assets/css/test.css">
+    <title>F5 XC CDN Test Lab</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
-        code { background: #f4f4f4; padding: 2px 5px; }
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f4f7f6; }
+        h1 { color: #005a9c; border-bottom: 2px solid #005a9c; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-top: 4px solid #005a9c; }
+        .card h2 { margin-top: 0; font-size: 1.2rem; color: #444; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; padding: 8px; background: #f9f9f9; border-radius: 4px; font-family: monospace; font-size: 0.9rem; word-break: break-all; }
+        a { color: #007bff; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        .tag { font-size: 0.7rem; text-transform: uppercase; background: #eee; padding: 2px 6px; border-radius: 10px; vertical-align: middle; margin-left: 5px; }
+        footer { margin-top: 40px; font-size: 0.8rem; text-align: center; color: #777; }
     </style>
 </head>
 <body>
-    <h1>🚀 CDN & Load Balancer Test Suite</h1>
-    <p>Origin: <code>adios-official.github.io/cdn-test-repository/</code></p>
-    
-    <div class="test-grid">
-        <div class="card">
-            <h3>🖼️ Image Test</h3>
-            <img src="assets/img/test.jpg" alt="Test Image" style="width: 100%;">
-            <p><a href="assets/img/test.jpg">View Direct .jpg</a></p>
-        </div>
 
+    <h1>🚀 F5 XC CDN Testing Dashboard</h1>
+    <p>Use this page to verify <strong>Cache HIT/MISS</strong> behavior across different file types.</p>
+
+    <div class="grid">
         <div class="card">
-            <h3>📄 Document Test</h3>
+            <h2>📦 Scripts & Styles</h2>
             <ul>
-                <li><a href="assets/docs/test.pdf" target="_blank">Open .pdf</a></li>
-                <li><a href="assets/docs/test.txt">Open .txt</a></li>
+                <li><a href="assets/js/main.js" target="_blank">/assets/js/main.js</a> <span class="tag">JS</span></li>
+                <li><a href="assets/js/analytics.js" target="_blank">/assets/js/analytics.js</a> <span class="tag">JS</span></li>
+                <li><a href="assets/css/style.css" target="_blank">/assets/css/style.css</a> <span class="tag">CSS</span></li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>🎬 Media Test</h3>
-            <video controls style="width: 100%;">
-                <source src="assets/video/test.mp4" type="video/mp4">
-            </video>
+            <h2>🖼️ Images (Regex Test)</h2>
+            <ul>
+                <li><a href="assets/img/hero-banner.jpg" target="_blank">/assets/img/hero-banner.jpg</a> <span class="tag">JPG</span></li>
+                <li><a href="assets/img/logo-v2.png" target="_blank">/assets/img/logo-v2.png</a> <span class="tag">PNG</span></li>
+                <li><a href="assets/img/loading-spinner.gif" target="_blank">/assets/img/loading-spinner.gif</a> <span class="tag">GIF</span></li>
+            </ul>
         </div>
 
         <div class="card">
-            <h3>⚙️ Dev Assets</h3>
+            <h2>📄 Documents & Data</h2>
             <ul>
-                <li><a href="assets/js/test.js">test.js</a></li>
-                <li><a href="assets/css/test.css">test.css</a></li>
+                <li><a href="assets/docs/readme.txt" target="_blank">/assets/docs/readme.txt</a> <span class="tag">TXT</span></li>
+                <li><a href="assets/docs/api.md" target="_blank">/assets/docs/api.md</a> <span class="tag">MD</span></li>
+                <li><a href="assets/docs/large-asset.dat" target="_blank">/assets/docs/large-asset.dat</a> <span class="tag">DAT</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🎥 Video (Large Object)</h2>
+            <ul>
+                <li><a href="assets/video/promo.mp4" target="_blank">/assets/video/promo.mp4</a> <span class="tag">MP4 (10MB)</span></li>
             </ul>
         </div>
     </div>
 
-    <script src="assets/js/test.js"></script>
+    <footer>
+        Origin: github.com/Adios-official/cdn-test-repository | Powered by F5 Distributed Cloud
+    </footer>
+
 </body>
 </html>
