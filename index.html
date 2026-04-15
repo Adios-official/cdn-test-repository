@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN Test Suite</title>
+    <link rel="stylesheet" href="assets/css/test.css">
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        code { background: #f4f4f4; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 CDN & Load Balancer Test Suite</h1>
+    <p>Origin: <code>adios-official.github.io/cdn-test-repository/</code></p>
+    
+    <div class="test-grid">
+        <div class="card">
+            <h3>🖼️ Image Test</h3>
+            <img src="assets/img/test.jpg" alt="Test Image" style="width: 100%;">
+            <p><a href="assets/img/test.jpg">View Direct .jpg</a></p>
+        </div>
+
+        <div class="card">
+            <h3>📄 Document Test</h3>
+            <ul>
+                <li><a href="assets/docs/test.pdf" target="_blank">Open .pdf</a></li>
+                <li><a href="assets/docs/test.txt">Open .txt</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🎬 Media Test</h3>
+            <video controls style="width: 100%;">
+                <source src="assets/video/test.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Dev Assets</h3>
+            <ul>
+                <li><a href="assets/js/test.js">test.js</a></li>
+                <li><a href="assets/css/test.css">test.css</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/js/test.js"></script>
+</body>
+</html>
