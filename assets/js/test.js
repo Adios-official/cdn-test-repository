@@ -1,1 +1,1 @@
-console.log('CDN Test');
+console.log('CDN Test JS Loaded');

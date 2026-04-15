@@ -1,1 +1,1 @@
-CDN Test Document
+This is a plain text file for CDN testing.
